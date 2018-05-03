@@ -1,0 +1,139 @@
+body {
+  font-size: 14px;
+  height:100%;
+  width:100%;
+  position:absolute;
+  -ms-overflow-style: none;  // IE 10+
+  overflow: -moz-scrollbars-none;  // Firefox
+}
+
+body::-webkit-scrollbar {
+    display: none;  // Safari and Chrome
+}
+
+p {
+  position:absolute;
+  right: 0;
+  top: 0;
+  font-size: 90%;
+  line-height: 25px;
+}
+
+
+/* Window */
+.background{
+    background-color:#fff;
+    width:1920px;
+    height:1080px;
+    display:block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
+    position: relative;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+
+/* Score */
+.score {
+  position: absolute;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 250%;
+  padding-top: 20px;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 2px 2px 0 #000;
+  z-index: 4;
+}
+
+/* Bat */
+.bat {
+	height: 118px;
+	width: 160px;
+	position: absolute;
+	bottom: 50%;
+	left: 130px;
+	z-index: 3;
+  transition: transform 0.3s;
+}
+
+/* shards */
+.spike {
+	width: 100px;
+  bottom: 0;
+  right: -120px;
+	height: 100px;
+	position: relative;
+	z-index: 3;
+  background: url("../img/spike-1.png")
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.rSpike {
+	width: 100px;
+  top: 0;
+  right: -120px;
+	height: 100px;
+	position: relative;
+	z-index: 3;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background: url("../img/spike-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+
+.sonarContainer{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.sonar{
+  position: absolute;
+  width: 800px;
+  height: 400px;
+  z-index: 999999;
+}
+
+.moveLeft {
+  position: absolute;
+  animation: RTL 7s linear;
+  animation-iteration-count: infinite;
+}
+
+.delay1{
+  animation-delay: 1s;
+}
+.delay2{
+  animation-delay: 2s;
+}
+.delay3{
+  animation-delay: 3s;
+}
+.delay4{
+  animation-delay: 4s;
+}
+.delay5{
+  animation-delay: 5s;
+}
+.delay6{
+  animation-delay: 6s;
+}
+
+@keyframes RTL {
+  from {right: -200px;}
+  to {
+    right:130%;
+  }
+}
